@@ -21,7 +21,7 @@ jobkorea_enddate = soup.select("#dev-gi-list > div > div.tplList.tplJobList > ta
 
 # 크롤링 내용
 for item in zip(jobkorea_startdate, jobkorea_title, jobkorea_position, jobkorea_name, jobkorea_region, jobkorea_enddate):
-    if db.information.find_one({"title" : itme[1].text.strip(), ('_id':0)}) == None:
+    if db.information.find_one({"title" : item[1].text.strip()}, {'_id': 0}) == None:
         db.information.insert_one({
             "startdate": item[0].text.strip(), 
             "title": item[1].text.strip(), 

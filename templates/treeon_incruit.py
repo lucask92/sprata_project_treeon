@@ -23,7 +23,7 @@ incruit_enddate = soup.select("#container > div.n_job_list_default > div.n_job_l
 result = []
 
 for item in zip(incruit_startdate, incruit_title, incruit_position, incruit_name, incruit_region, incruit_enddate):
-    if db.information.find_one({"title" : itme[1].text.strip(), {'_id':0}}) == None:
+    if db.information.find_one({"title" : item[1].text.strip()}, {'_id':0}) == None:
         db.information.insert_one({
             "startdate": item[0].text.strip(), 
             "title": item[1].text.strip(), 
