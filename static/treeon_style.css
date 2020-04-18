@@ -1,14 +1,24 @@
-.treeon_all {
-  background-color: #fafafa;
-  padding: 10px;
-  margin: 10px;
+.all {
+  width: 900;
+  margin: auto;
 }
 
-.treeon_title {
-  position: relative;
+.treeon_all {
+  background-color: #fafafa;
+  margin: 50px;
+  padding: 50px;
+  text-align: center;
+}
+
+.treeon_logo {
   float: left;
 }
 
+.treeon_title {
+  float: left;
+  margin-left: 20px;
+}
+/*  */
 .table {
   border-collapse: collapse;
   border-top: 3px solid #168;
