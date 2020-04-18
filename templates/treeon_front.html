@@ -47,17 +47,16 @@
           if (response['result'] == 'success') {
             let data = response['data'];
             for (let i = 0; i < data.length; i++) {
-              make_list(i+1, data[i]['startdate'], data[i]['title'], data[i]['position'], data[i]['name'], data[i]['region'], data[i]['enddate'])
+              make_list(i+1, data[i]['title'], data[i]['position'], data[i]['name'], data[i]['region'], data[i]['enddate'])
             }
           }
         }
       });
     }
 
-    function make_list(row, startdate, title, position, name, region, enddate) {
+    function make_list(row, title, position, name, region, enddate) {
       let temp_html = '<tr class="contents_add">\
         <td class="row">'+ row + '</p>\
-        <td class="startdate">'+ startdate + '</p>\
         <td class="title">'+ title + '</p>\
         <td class="position">'+ position + '</p>\
         <td class="name">'+ name + '</p>\
@@ -71,12 +70,15 @@
 </head>
 
 <body>
-  <button onclick="write_info()" type="button" class="btn btn-primary"> 새로고침 </button>
+  <span style="float:right;">
+    <button onclick="write_info()" type="button" class="btn btn-primary"> 새로고침 </button>
+  </span>
+  
+  <br></br>
   <table class="table" id="job_information">
     <thead>
       <tr>
         <th scope="col">순서</th>
-        <th scope="col">시작일</th>
         <th scope="col">제목</th>
         <th scope="col">직종</th>
         <th scope="col">이름</th>

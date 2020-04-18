@@ -1,3 +1,25 @@
-.container {
-    display: flex; /* or inline-flex */
-  }
+
+.table {
+  border-collapse: collapse;
+  border-top: 3px solid #168;
+}  
+
+.table th {
+  color: #168;
+  background: #f0f6f9;
+  text-align: center;
+  white-space:nowrap;
+}
+
+#contents_add{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: 100;
+  font-size: 13px;
+}
+
+.menu {
+  margin-top: 200px;
+  padding-top: 200px;
+}
