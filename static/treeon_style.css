@@ -1,30 +1,31 @@
-.all {
-  width: 900;
+.wrap {
+  width: 1000px;
   margin: auto;
 }
 
-.treeon_all {
-  background-color: #fafafa;
-  margin: 50px;
-  padding: 50px;
+.comment {
+  color: blue;
+  font-weight: bold;
+}
+
+.treeon_img {
+  padding-top: 40px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
-.treeon_logo {
-  float: left;
+.treeon_title {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #fafafa;
 }
 
-.treeon_title {
-  float: left;
-  margin-left: 20px;
-}
-/*  */
 .table {
+  text-align: center;
   border-collapse: collapse;
   border-top: 3px solid #168;
-  margin: 10px;
-  padding: 10px;
-}  
+}
 
 .table th {
   color: #168;
@@ -33,15 +34,11 @@
   white-space:nowrap;
 }
 
-#contents_add{
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
-  font-weight: 100;
-  font-size: 13px;
+#contents_add > tr > td.row {
+  margin-left: 15px;
 }
 
-.menu {
-  margin-top: 200px;
-  padding-top: 200px;
+.treeon_logo {
+  clear: both;
+  position: relative;
 }
