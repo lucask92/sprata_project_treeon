@@ -1,7 +1,12 @@
-.treeon_title {
+.treeon_all {
   background-color: #fafafa;
   padding: 10px;
   margin: 10px;
+}
+
+.treeon_title {
+  position: relative;
+  float: left;
 }
 
 .table {
