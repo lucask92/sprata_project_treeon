@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 
 from pymongo import MongoClient           # pymongo를 임포트 하기(패키지 인스톨 먼저 해야겠죠?)
-client = MongoClient('localhost', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
+client = MongoClient('mongodb://lucask92:sene92@15.164.166.116', 27017)  # mongoDB는 27017 포트로 돌아갑니다.
 db = client.projectTreeon                      # 'dbsparta'라는 이름의 db를 만듭니다.
 
 
@@ -17,6 +17,14 @@ def job_list():
 	# 1. db에서 데이터 가져오기.
     res = list(db.information.find({},{'_id':0}))
     return jsonify({'result': 'success', 'data' : res, 'msg': '완료'})
+
+@app.route('/runpython', methods=['GET'])
+def run_python():
+    import treeon_incruit
+    import treeon_jobkorea
+    import treeon_peopleNjob
+    import treeon_saramIn
+    return 'Success!'
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
