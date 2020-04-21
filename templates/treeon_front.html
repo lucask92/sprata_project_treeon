@@ -34,14 +34,10 @@
 
     $(document).ready(function () {
       $('#contents_add').html('');
+      $('#dtBasicExample').DataTable();
+      $('.dataTables_length').addClass('bs-select');
       write_info();
     });
-
-    // // 적용해야되는 내용
-    // $(document).ready(function () {
-    //   $('#dtBasicExample').DataTable();
-    //   $('.dataTables_length').addClass('bs-select');
-    // });
 
     function write_info() {
       $.ajax({
