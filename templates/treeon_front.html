@@ -47,6 +47,7 @@
         type: 'GET', // 타입을 작성합니다.
         url: '/information', // url을 작성합니다.
         data: {},
+        async: false,
         // API 쓰는 코드 찾아보기 (OPEN API) append 써서 작성해보기
         success: function (response) {
           if (response['result'] == 'success') {
