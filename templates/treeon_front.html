@@ -10,7 +10,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- css -->  
+  <!-- css -->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='treeon_style.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Cute+Font|Gamja+Flower&display=swap" rel="stylesheet">
 
@@ -36,6 +36,12 @@
       $('#contents_add').html('');
       write_info();
     });
+
+    // // 적용해야되는 내용
+    // $(document).ready(function () {
+    //   $('#dtBasicExample').DataTable();
+    //   $('.dataTables_length').addClass('bs-select');
+    // });
 
     function write_info() {
       $.ajax({
@@ -88,15 +94,17 @@
       <caption> 한 눈에 쏙 이직 공고 리스트 </caption>
     </div>
 
-    <table class="table" id="job_information">
+    <!-- <table class="table" id="job_information"> -->
+    <!-- 적용해야되는 테이블명-->
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
       <thead>
         <tr>
-          <th scope="col">순서</th>
-          <th scope="col">제목</th>
-          <th scope="col">직종</th>
-          <th scope="col">이름</th>
-          <th scope="col">지역</th>
-          <th scope="col">마감일</th>
+          <th class="th-sm" scope="col">순서</th>
+          <th class="th-sm" scope="col">제목</th>
+          <th class="th-sm" scope="col">직종</th>
+          <th class="th-sm" scope="col">이름</th>
+          <th class="th-sm" scope="col">지역</th>
+          <th class="th-sm" scope="col">마감일</th>
         </tr>
       </thead>
       <tbody id="contents_add">
