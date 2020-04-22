@@ -53,14 +53,14 @@
           if (response['result'] == 'success') {
             let data = response['data'];
             for (let i = 0; i < data.length; i++) {
-              make_list(i + 1, data[i]['title'], data[i]['position'], data[i]['name'], data[i]['region'], data[i]['enddate'])
+              make_list(i + 1, data[i]['title'], data[i]['position'], data[i]['name'], data[i]['region'], data[i]['enddate'], data[i]['link'])
             }
           }
         }
       });
     }
 
-    function make_list(row, title, position, name, region, enddate) {
+    function make_list(row, title, position, name, region, enddate, link) {
       let temp_html = '<tr class="contents_add">\
         <td class="row">'+ row + '</p>\
         <td class="title">'+ title + '</p>\
@@ -68,6 +68,7 @@
         <td class="name">'+ name + '</p>\
         <td class="region">'+ region + '</p>\
         <td class="enddate">'+ enddate + '</p>\
+        <td class="link">'+ link + '</p>\
       </tr>';
       $('#contents_add').append(temp_html);
     }
@@ -105,6 +106,7 @@
           <th class="th-sm" scope="col">이름</th>
           <th class="th-sm" scope="col">지역</th>
           <th class="th-sm" scope="col">마감일</th>
+          <th class="th-sm" scope="col">링크</th>
         </tr>
       </thead>
       <tbody id="contents_add">
