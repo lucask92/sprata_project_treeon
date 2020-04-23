@@ -27,5 +27,5 @@ for item in zip(saramIn_title, saramIn_position, saramIn_name, saramIn_region, s
             "name": item[2].text.strip(), 
             "region": item[3].text.strip(), 
             "enddate": item[4].text.strip(),
-            "link": item[5].attrs['href']
+            "link": "http://www.saramin.co.kr" + item[5].attrs['href']
             })

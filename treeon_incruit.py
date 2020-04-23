@@ -18,6 +18,7 @@ incruit_name = soup.select("#container > div.n_job_list_default > div.n_job_list
 incruit_region = soup.select("#container > div.n_job_list_default > div.n_job_list_table_a.list_full_default > table > tbody > tr > td:nth-child(3) > div > p > em")
 incruit_enddate = soup.select("#container > div.n_job_list_default > div.n_job_list_table_a.list_full_default > table > tbody > tr > td.lasts > div.ddays > p:nth-child(2)")
 incruit_link = soup.select("#container > div.n_job_list_default > div.n_job_list_table_a.list_full_default > table > tbody > tr > td:nth-child(2) > div > span.accent > a")
+print(len(incruit_title), len(incruit_position), len(incruit_name), len(incruit_region), len(incruit_enddate), len(incruit_link))
 
 # 크롤링 내용
 result = []
