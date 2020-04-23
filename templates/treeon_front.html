@@ -62,13 +62,13 @@
 
     function make_list(row, title, position, name, region, enddate, link) {
       let temp_html = '<tr class="contents_add">\
-        <td class="row">'+ row + '</p>\
-        <td class="title">'+ title + '</p>\
-        <td class="position">'+ position + '</p>\
-        <td class="name">'+ name + '</p>\
-        <td class="region">'+ region + '</p>\
-        <td class="enddate">'+ enddate + '</p>\
-        <td class="link">'+ link + '</p>\
+        <td class="row">'+ row + '</td>\
+        <td class="title">'+ title + '</td>\
+        <td class="position">'+ position + '</td>\
+        <td class="name">'+ name + '</td>\
+        <td class="region">'+ region + '</td>\
+        <td class="enddate">'+ enddate + '</td>\
+        <td class="link"> <a href="' + link + '" target="_blank"> 바로가기 </a></td>\
       </tr>';
       $('#contents_add').append(temp_html);
     }
