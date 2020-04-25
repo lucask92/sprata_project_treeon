@@ -37,14 +37,13 @@
   <script>
 
     $(document).ready(function () {
-      $('#contents_add').html('');
       write_info();
-        alert("hi")
       $('#dtBasicExample').DataTable();
       $('.dataTables_length').addClass('bs-select');
     });
 
     function write_info() {
+      $('#contents_add').html('');
       $.ajax({
         type: 'GET', // 타입을 작성합니다.
         url: '/information', // url을 작성합니다.
