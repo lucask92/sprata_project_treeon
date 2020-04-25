@@ -17,17 +17,17 @@
 }
 
 #contents_add > tr > td.title {
-  width: 35%;
+  width: 30%;
 }
 
 #contents_add > tr > td.position {
-  width: 35%;
+  width: 30%;
   overflow-y:auto;
   overflow-x:hidden;
 }
 
 #contents_add > tr > td.name {
-  width: 15%;
+  width: 10%;
 
 }
 
