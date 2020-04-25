@@ -31,5 +31,5 @@ for item in zip(jobkorea_startdate, jobkorea_title, jobkorea_position, jobkorea_
             "name": item[3].text.strip(), 
             "region": item[4].text.strip(), 
             "enddate": item[5].text.strip(),
-            "link": 'www.jobkorea.co.kr'+ item[6].attrs['href']
+            "link": "http://www.jobkorea.co.kr" + item[6].attrs['href']
         })
