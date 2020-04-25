@@ -10,9 +10,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- css -->
+  <!-- css file -->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='treeon_style.css') }}">
-  <link href="https://fonts.googleapis.com/css?family=Cute+Font|Gamja+Flower&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
 
   <!-- Bootstrap CSS -->
@@ -33,7 +32,9 @@
 
   <!-- 구글 폰트-->
   <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cute+Font|Gamja+Flower&display=swap" rel="stylesheet">
 
+  <!-- 함수 설정-->
   <script>
 
     $(document).ready(function () {
@@ -45,11 +46,10 @@
     function write_info() {
       $('#contents_add').html('');
       $.ajax({
-        type: 'GET', // 타입을 작성합니다.
-        url: '/information', // url을 작성합니다.
+        type: 'GET',
+        url: '/information',
         data: {},
         async: false,
-        // API 쓰는 코드 찾아보기 (OPEN API) append 써서 작성해보기
         success: function (response) {
           if (response['result'] == 'success') {
             let data = response['data'];
@@ -79,21 +79,13 @@
 </head>
 
 <body>
+  <!-- 헤드 -->
   <header id="header" class="alt">
     <div class="inner">
       <h1>Treeon</h1>
       <p> 언제나 이직정보를 빠르게 확인하고 싶다면? <a href="treeon.me">Treeon</a></p>
     </div>
   </header>
-
-  <!-- <div class="wrap">
-    <div class="treeon_img">
-      <img src="http://garmuri.com/files/attach/images/169/748/083/9a976fd4c3eea831c7bf3062c2937d7b.jpg"
-        class="img-fluid" alt="Responsive image" width="200" height="200">
-    </div>
-    <div class="treeon_title">
-      <h2> Treeon ㅣ 한눈에 쏙 이직 정보 </h2>
-    </div> -->
 
   <!-- CTA -->
   <section id="cta" class="main special">
@@ -105,17 +97,8 @@
     </ul>
   </section>
 
-  <!-- <br></br>
-  <div>
-    <span style="float:right;">
-      <button onclick="write_info()" type="button" class="btn btn-primary"> Update </button>
-    </span>
-    <caption> 한 눈에 쏙 이직 공고 리스트 </caption>
-  </div> -->
-
-  <!-- <table class="table" id="job_information"> -->
-  <!-- 적용해야되는 테이블명-->
-  <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+  <!-- Table -->
+  <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%" >
     <thead>
       <tr>
         <th class="th-sm" scope="col">순서</th>
