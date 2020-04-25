@@ -21,10 +21,13 @@
 
 #contents_add > tr > td.position {
   width: 30%;
+  overflow-y:auto;
+  overflow-x:hidden;
 }
 
 #contents_add > tr > td.name {
   width: 10%;
+
 }
 
 #contents_add > tr > td.region {
@@ -39,5 +42,9 @@
 }
 
 #dtBasicExample_length {
+  text-align: left;
+}
+
+#dtBasicExample_info {
   text-align: left;
 }
