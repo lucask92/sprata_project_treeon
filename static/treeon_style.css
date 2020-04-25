@@ -11,8 +11,9 @@
 }
 
 #contents_add > tr > td.row {
-  margin-left: 20px;
+  margin-left: 30px;
   width: 5%;
+  text-align: center;
 }
 
 #contents_add > tr > td.title {
