@@ -11,6 +11,10 @@ db = client.projectTreeon                      # 'dbsparta'라는 이름의 db�
 def home():
     return render_template('treeon_front.html')
 
+@app.route('/page2')
+def career():
+    return render_template('treeon_career.html')
+
 ## API 역할을 하는 부분
 @app.route('/information', methods=['GET'])
 def job_list():
